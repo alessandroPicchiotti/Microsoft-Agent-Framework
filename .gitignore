@@ -1,0 +1,86 @@
+## =========================
+## .NET / C# / ASP.NET Core
+## =========================
+
+# Build results
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]uild/
+[Bb]uild[Ll]og.*
+
+# Test results
+[Tt]est[Rr]esult*/
+[Bb]enchmark[Dd]ot[Nn]et.Artifacts/
+
+# Visual Studio / Rider / VS Code
+.vs/
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/tasks.json
+!.vscode/extensions.json
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# NuGet
+*.nupkg
+*.snupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+# Keep lock file only if you want deterministic restore for apps:
+# packages.lock.json
+
+# Dotnet tools / local config (optional - keep if shared)
+# .config/dotnet-tools.json
+
+# Logs
+*.log
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# IIS Express
+/.vs/config/applicationhost.config
+
+# Publish output
+publish/
+wwwroot/dist/
+wwwroot/lib/
+
+# Entity Framework
+*.mdf
+*.ldf
+
+# OS generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Azure / local secrets
+appsettings.*.local.json
+secrets.json
+
+# Coverage
+coverage/
+*.coverage
+*.coveragexml
+TestResults/
+
+# Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user

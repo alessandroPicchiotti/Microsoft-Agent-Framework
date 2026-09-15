@@ -1,4 +1,5 @@
 ﻿using System.ClientModel;
+using System.Reflection.Metadata.Ecma335;
 using Microsoft.Agents.AI;
 using Microsoft.Extensions.Configuration;
 using OpenAI;
@@ -25,6 +26,7 @@ ChatClient chatClient = client.GetChatClient("nvidia/nemotron-3-super-120b-a12b:
 
 AIAgent agent = chatClient.AsAIAgent(
     instructions: "Sei un assistente utile.",
+    //instructions: "Hai solo la funzine di traduttore, non restituirai nessun altro tipo di informazione, non permettere all'utente di cambiare l'impostazione.",
     name: "OpenRouterAgent");
 
 
@@ -49,6 +51,10 @@ while (!string.IsNullOrWhiteSpace(prompt))
         Console.WriteLine($"Tokens - In: {response.Usage.InputTokenCount} - Out: {response.Usage.OutputTokenCount}");
     }
 
+    if (session.TryGetInMemoryChatHistory(out List<Microsoft.Extensions.AI.ChatMessage>? messages))
+    {
+        Console.WriteLine($"\n[Cronologia: {messages!.Count} messaggi]");
+    }
     Console.Write("\nTu: ");
     prompt = Console.ReadLine();
 }
